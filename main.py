@@ -3,19 +3,20 @@ import json
 import random as rnd
 
 
-class Team():
+class Team:
     def __init__(self, name):
         self.score = 0
         self.name = name
 
+
 def main():
     # preparejson.prepare_json()
-    loaded_dict = json.load(open(f"all_data.json",encoding="utf-8"))
+    loaded_dict = json.load(open(f"all_data.json", encoding="utf-8"))
     keys = list(loaded_dict.keys())
 
-    team1 = Team("Team 1") 
-   
-    team2 = Team("Team 2")  
+    team1 = Team("Team 1")
+
+    team2 = Team("Team 2")
 
     teams = [team1, team2]
 
@@ -34,8 +35,8 @@ def main():
             break
         current_team = teams[idx % 2]
         print()
-        print(current_team.name,"Starts...")
-        print("-"*30)
+        print(current_team.name, "Starts...")
+        print("-" * 30)
         for key in keys:
             rnd.shuffle(keys)
             print()
@@ -52,11 +53,12 @@ def main():
             elif in_choice == "3":
                 current_team.score += 10
                 if current_team.score >= limit_score:
-                    print(current_team.name,"has won the game!")
+                    print(current_team.name, "has won the game!")
                     choice = "q"
                     break
             else:
                 break
         idx += 1
+
 
 main()
