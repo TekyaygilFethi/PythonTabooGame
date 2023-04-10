@@ -18,7 +18,7 @@ in ```preparejson.py``` file. This project converts English words to Turkish wor
 1. Clone the repository to your computer
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/TekyaygilFethi/PythonTabooGame.git
 ```
 
 2. Go to cloned folder via cd.
